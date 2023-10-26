@@ -51,12 +51,4 @@ for (const file of eventFiles) {
   }
 }
 
-
-client.distube = new DisTube(client, {
-  emitNewSongOnly: true,
-  leaveOnFinish: true,
-  emitAddListWhenCreatingQueue: false,
-  plugins: [new SpotifyPlugin()],
-});
-
 client.login(process.env.TOKEN);
