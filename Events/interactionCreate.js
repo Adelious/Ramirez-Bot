@@ -63,7 +63,7 @@ module.exports = {
         });
 
         await channel.setTopic(interaction.user.id);
-
+        
         let embed = new Discord.EmbedBuilder()
           .setColor(Discord.Colors.Blue)
           .setTitle("Candidature")
@@ -90,7 +90,7 @@ module.exports = {
         await channel.send({ embeds: [embed], components: [button] });
 
         channel.send(
-          "## ✏╏modèle-candidature\n\n* **Pseudo** In Game :\n* **Âge** :\n* **Motivations** : *10 lignes minimum*\n* **Pourquoi vous et pas un autre** : *10 lignes minimum*\n* **Que représente la Ramirez pour vous** :\n* **Nombre d'heure de jeu sur le serveur** ( *screenshot* ) :\n* **Sanctions sur le serveur** ( *screenshot* ) :\n* **Informations supplémentaires** ( *facultatives* ) :\n\nEn cas de soucis avec ce formulaire, veuillez contacter la modération. Tout abus sera sévèrement sanctinné."
+          "## ✏╏modèle-candidature\n\n* **Pseudo** In Game :\n* **Âge** :\n* **Motivations** : *10 lignes minimum*\n* **Pourquoi vous et pas un autre** : *10 lignes minimum*\n* **Que représente la Ramirez pour vous** :\n* **Nombre d'heure de jeu sur le serveur** ( *screenshot* ) :\n* **Sanctions sur le serveur** ( *screenshot* ) :\n* **Informations supplémentaires** ( *facultatives* ) :\n\nEn cas de soucis avec ce formulaire, veuillez contacter la modération. Tout abus sera sévèrement sanctionné."
         );
       }
 
@@ -125,7 +125,7 @@ module.exports = {
       if (
         interaction.customId === "btn-economie" ||
         interaction.customId === "btn-judiciaire" ||
-        interaction.customId === "btn-culturelle" ||
+        interaction.customId === "btn-mod" ||
         interaction.customId === "btn-communication"
       ) {
         let channel = await interaction.guild.channels.create({

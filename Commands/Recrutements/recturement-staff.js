@@ -21,8 +21,8 @@ module.exports = {
         { name: "Communication",
           value: "* <@&1159492957431414936> : Elle est charger de communiquer l'ensemble des évènements qui sont proposer par la Ramirez au membre et habitant de Pines City. Elle doit également partager le serveur discord sur le discord de SRP via la pub dans le salon ⁠<#1113430149766058026>",
         },
-        { name: "Culturelle",
-          value: "* <@&1159492950192033802> :  elle gère les événements de l’organisation. Il est là pour apporter une touche de calme dans la ville. Elle travaille en collaboration avec le <@&1107562203382554655> pour gérer la radio de l’organisation et les modérateurs de SRP pour les événements.",
+        { name: "Modérateur",
+          value: "* <@&1114681339422199910> :  il est chargé de maintenir le calme dans le serveur discord. Son rôle n’est que en lien avec le serveur. Il ne peut sanctionner un membres en jeu. Il participe dorénavant au recrutement.",
         }
       ])
       .setTimestamp()
@@ -52,14 +52,14 @@ module.exports = {
           .setStyle(ButtonStyle.Danger)
           .setEmoji("📢")
     );
-    const culturelle = new ActionRowBuilder().addComponents(
+    const moderateur = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
-          .setCustomId("btn-culturelle")
-          .setLabel("Culturelle")
+          .setCustomId("btn-mod")
+          .setLabel("Modérateur")
           .setStyle(ButtonStyle.Secondary)
           .setEmoji("📖")
     );
 
-    await interaction.reply({ embeds: [embed], components: [economie, judiciaire, communication, culturelle]});
+    await interaction.reply({ embeds: [embed], components: [economie, judiciaire, communication, moderateur]});
   },
 };
